@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html , body{
+    height: 100%;
+}
+
+h2{
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+}
+
+p,a, input, label, button{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.form-floating{
+    text-align: start;
+}
+
+.errorLabel{
+    margin: 5px;
+}
