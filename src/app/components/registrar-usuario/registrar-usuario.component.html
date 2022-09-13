@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div *ngIf="!loading" class="body">
-        <h2 class="text-center my-3">Registrar Usuario</h2>
+        <h3 class="text-center my-4">Formulario de registro</h3>
         <div class="card">
             <div class="card-body">
                 <form [formGroup]="registrarUsuario" (ngSubmit)="registrar()" class="my-3">
@@ -32,9 +32,9 @@
                         </span>
                     </div>
                     <div class="d-grid gap-2 my-3">
-                        <button [disabled]="registrarUsuario.invalid"  class="btn btn-primary btn-lg" type="submit">Registrar</button>
+                        <button [disabled]="registrarUsuario.invalid"  class="btn btn-primary btn-lg" type="submit">Guardar</button>
                     </div>
-                    <a class="my-3" [routerLink]="['/login']">Volver</a>
+                    <a class="my-3" [routerLink]="['/login']"><i class="fa-solid fa-arrow-left"></i> &nbsp; Volver</a>
                 </form>
             </div>
         </div>

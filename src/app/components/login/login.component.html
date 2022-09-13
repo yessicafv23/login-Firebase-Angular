@@ -1,7 +1,7 @@
 <div class="wrapper">
     <div *ngIf="!loading" class="body">
         <img class="logo" src="../../../assets/img/user.png" alt="login">
-        
+
         <form [formGroup]="loginUsuario" (ngSubmit)="login()" class="my-3">
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
@@ -14,18 +14,20 @@
                 </span>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" formControlName="password"  placeholder="Password">
+                <input type="password" class="form-control" formControlName="password" placeholder="Password">
                 <label>Password</label>
-                <span *ngIf="loginUsuario.get('password')?.hasError('required') && loginUsuario.get('password')?.touched"
+                <span
+                    *ngIf="loginUsuario.get('password')?.hasError('required') && loginUsuario.get('password')?.touched"
                     class="text-danger errorLabel">El <strong>password</strong> es requerido
                 </span>
             </div>
             <div class="d-grid gap-2 my-3">
-                <button [disabled]="loginUsuario.invalid" class="btn btn-primary btn-lg" type="submit">Iniciar Sesión</button>
+                <button [disabled]="loginUsuario.invalid" class="btn btn-primary btn-lg" type="submit">Iniciar
+                    Sesión</button>
             </div>
-            <p class="my-2">No tienes cuenta <a [routerLink]="['/registrar-usuario']">Registrar</a></p>
-            <a  [routerLink]="['/recuperar-password']">Recuperar contraseña</a>
+            <p class="my-2">¿No tienes cuenta? <a [routerLink]="['/registrar-usuario']">Registrate</a></p>
+            <a [routerLink]="['/recuperar-password']">Recuperar contraseña</a>
         </form>
     </div>
-    <app-spinner *ngIf="loading" ></app-spinner>
+    <app-spinner *ngIf="loading"></app-spinner>
 </div>
